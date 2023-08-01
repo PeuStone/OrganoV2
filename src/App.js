@@ -51,7 +51,7 @@ function App() {
 
   return (
     <div className="App">
-      <Banner />
+      <Banner enderecoImagem='/imagens/banner.png' />
       <Formulario times={times.map(time => time.nome)} colaboradorAdicionado={colaborador => novoColaboradorAdicionado(colaborador)} />
       {times.map(time =>
         <Time key={time.nome}
@@ -59,7 +59,7 @@ function App() {
           corPrimaria={time.corPrimaria}
           corSecundaria={time.corSecundaria}
           colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
-          />)}
+        />)}
       <Rodape />
 
     </div>
