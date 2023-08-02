@@ -45,9 +45,9 @@ function App() {
     },
   ]
 
-  const [colaboradores, setColaboradores] = useState([]);
+  const [colaboradores, setColaboradores] = useState<IColaborador[]>([]);
   const novoColaboradorAdicionado = (colaborador: IColaborador) => {
-    // setColaboradores([...colaboradores, colaborador]);
+    setColaboradores([...colaboradores, colaborador]);
   }
 
   return (
